@@ -40,7 +40,7 @@ oldest_password_change() {
  done | tail -n 1
 }
 
-show_usage() {
+help_age() {
   echo "Usage:"
   echo "    pass age PASS-NAME"
 }
@@ -53,7 +53,7 @@ cmd_age() {
 }
 
 case $1 in
-  --help) show_usage ;;
-  "") show_usage ;;
+  --help) help_age ;;
+  "") help_age ;;
   *) cmd_age "$@" ;;
 esac
