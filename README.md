@@ -7,10 +7,15 @@ A [pass](https://www.passwordstore.org) extension that can show you how long you
 - Why not?
 - It could be useful to use for password rotation
 
+## Requirements
+
+These commands assume you're using pass together with git. It won't do much if it cannot examine older versions of your password files.
+
 ## Installation
 
 1. Enable pass [extensions](https://www.passwordstore.org/#extensions).
 2. Copy or symlink `age.bash` and `ages.bash` into your `~/.password-store/.extensions` directory.
+
 
 ## How to use
 
