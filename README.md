@@ -2,17 +2,17 @@
 
 A [pass](https://www.passwordstore.org) extension that can show you how long you are using a certain password.
 
-# Why
+## Why
 
 - Why not?
 - It could be useful to use for password rotation
 
-# Installation
+## Installation
 
 1. Enable pass [extensions](https://www.passwordstore.org/#extensions).
 2. Copy or symlink `age.bash` and `ages.bash` into your `~/.password-store/.extensions` directory.
 
-# How to use
+## How to use
 
 ### Show the age of one password
 
@@ -32,4 +32,31 @@ or, if you're only interested in a certain set of passwords in a subdirectory, s
 
 ```terminal
 pass ages work
+```
+
+Note that this command can be very slow as it likely has to decrypt multiple versions of each password file.
+
+### Get help
+
+```terminal
+pass age --help
+pass ages --help
+```
+
+This will show you how to use the commands... but not much more. Sorry.
+
+## Advanced usage
+
+### Show password ages of all passwords, sorted by age, youngest first
+
+```terminal
+pass ages | sort -r
+# or
+pass ages subdirectory | sort -r
+```
+
+### Show the oldest three passwords
+
+```terminal
+pass ages | sort -r | tail -n 3
 ```
