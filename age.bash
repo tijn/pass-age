@@ -32,7 +32,7 @@ oldest_password_change() {
    if [ -z "$password" ]; then
      password="$(git_revision $path $revision)"
    else
-     if [ password != "$(git_revision $path $revision)" ]; then
+     if [ "$password" != "$(git_revision $path $revision)" ]; then
        break
      fi
    fi
